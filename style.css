@@ -1,0 +1,20 @@
+body{
+    background-color: black;
+}
+h1{
+    color: maroon;
+}
+.post{
+    background-color: #232323;
+    
+}
+.post h3{
+    color:white;
+    font-style: italic;
+}
+.post h4{
+    color: white;
+}
+a{
+    color:maroon
+}

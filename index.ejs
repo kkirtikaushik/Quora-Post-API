@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Quora Posts</title>
+</head>
+<body>
+    <h1>Quora Posts</h1>
+
+    <!-- Loop through the posts to display each post as a card -->
+    <% for (post of posts) { %>
+        <div class="post">
+            <h3>@<%= post.username %></h3>
+            <h4><%= post.content %></h4><br>
+            <a href="/posts/<%= post.id %>">View Full Post</a>
+            <a href="/posts/<%= post.id %>/edit">Edit</a>
+            <form method="POST" action="/posts/<%= post.id %>?_method=DELETE">
+                <button>Delete button</button>
+            </form>
+
+        </div>
+    <% } %>
+
+    <!-- Link to create a new post -->
+    <a href="/posts/new" class="create-btn">Create New Post</a>
+</body>
+</html>
